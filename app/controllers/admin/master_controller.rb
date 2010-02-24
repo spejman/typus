@@ -219,6 +219,7 @@ class Admin::MasterController < ApplicationController
                         :model_a => resource_class.typus_human_name, 
                         :model_b => @resource[:human_name])
     else
+      #TODO: Show the reason why cannot be related showing model_a and model_be errors.
       flash[:error] = _("{{model_a}} cannot be related to {{model_b}}.", 
                         :model_a => resource_class.typus_human_name, 
                         :model_b => @resource[:human_name])
@@ -252,6 +253,7 @@ class Admin::MasterController < ApplicationController
                           :model_a => resource_class.typus_human_name, 
                           :model_b => @resource[:human_name])
     else
+      #TODO: Show the reason why cannot be unrelated showing model_a and model_be errors.
       flash[:error] = _("{{model_a}} cannot be unrelated to {{model_b}}.", 
                         :model_a => resource_class.typus_human_name, 
                         :model_b => @resource[:human_name])
